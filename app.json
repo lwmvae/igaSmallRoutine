@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/mine/mine",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/courseDetail/courseDetail",
+    "pages/component/component-pages/course/course",
+    "pages/component/component-pages/banner/banner",
+    "pages/component/component-pages/title/title"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "学习平台",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#333",
+    "selectedColor":"#09bb07",
+    "list":[{
+      "pagePath":"pages/home/home",
+      "text":"首页",
+      "iconPath":"./image/wc.png",
+      "selectedIconPath":"./image/wcHL.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "./image/wc.png",
+      "selectedIconPath": "./image/wcHL.png"
+    }]
+  }
+}

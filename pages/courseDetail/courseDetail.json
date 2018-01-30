@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "课程",
+  "usingComponents": {
+    "title": "../component/component-pages/title/title"
+  }
+}

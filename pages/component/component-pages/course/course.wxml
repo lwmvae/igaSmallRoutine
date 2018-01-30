@@ -1,0 +1,12 @@
+<view class="course-list">
+  <view wx:for-items="{{courseList}}" id="{{item.id}}" class='course-wrapper' bindtap='onTab'>
+     <image src='{{item.avatar}}' class='course-image'></image> 
+    <view class='course-content'>
+      <text class='title'>{{item.title}}</text>
+      <text class='learing'>{{item.purchase}}人在学</text>
+      <text class='price'>￥{{item.price}}</text>
+    </view>
+  </view>
+  <slot></slot> 
+</view>
+ 

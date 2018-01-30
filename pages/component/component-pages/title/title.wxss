@@ -1,0 +1,20 @@
+.title{
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+.title::before,.title::after{
+  content: '';
+  display: inline-block;
+  width: 30vw;
+  height: 1px;
+  background-color: #dfdfdf;
+  position: relative;
+  top:-3px;
+}
+.title::before{
+  margin-right: 20px;
+}
+.title::after{
+  margin-left: 20px;
+}

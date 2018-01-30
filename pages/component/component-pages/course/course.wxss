@@ -1,0 +1,23 @@
+.course-wrapper{
+  display: flex;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+.course-image{
+  width: 135px;
+  height: 75px;
+  border-radius: 5px;
+}
+.course-content{
+  flex: 1;
+  margin-left: 10px;
+}
+.title{
+  display: block;
+  height: 38px;
+  overflow: hidden;
+}
+.learing{
+  display: block;
+  color: #999;
+}

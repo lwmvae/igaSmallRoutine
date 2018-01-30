@@ -1,0 +1,7 @@
+<view class="container">
+  <banner></banner>
+  <view class='recommend'>
+    <text class='title'>课程推荐</text>
+  </view>
+  <course bind:toDetail="goToDetail"></course>
+</view>

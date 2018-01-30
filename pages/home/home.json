@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "course": "../component/component-pages/course/course",
+    "banner": "../component/component-pages/banner/banner"
+  }
+}

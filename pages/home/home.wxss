@@ -1,0 +1,20 @@
+.recommend{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.recommend::before,.recommend::after{
+  content: '';
+  display: inline-block;
+  width: 30vw;
+  height: 1px;
+  background-color: #dfdfdf;
+  position: relative;
+  top:-3px;
+}
+.recommend::before{
+  margin-right: 20px;
+}
+.recommend::after{
+  margin-left: 20px;
+}

@@ -1,0 +1,26 @@
+<view class="container">
+  <view class='head'>
+    <view class='title'>
+      <text>{{courseDetail.title}}</text>
+    </view>
+    <view class='background'>
+      <image src="{{courseDetail.avatar}}"></image>
+    </view>
+  </view>
+  <view class='info'>
+    <title text="课程简介"></title>
+    <text class='info-wrapper'>{{courseDetail.info}}</text>
+  </view>
+  <view class='chapter-list'>
+    <title text="课程章节"></title>
+    <view class='list' wx:for="{{courseDetail.file}}" wx:for-index="idx">
+      <text class='title'>第{{idx+1}}章  {{item.fileTilte}}</text>
+      <view wx:for="{{item.fileContent}}">
+        <text class='detail'>{{idx+1}}-{{index+1}} {{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='btn'>
+  <button type='warn' bindtap='goToBuy'>立即购买</button>
+</view>
