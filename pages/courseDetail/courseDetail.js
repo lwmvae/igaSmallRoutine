@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
   data: {
     courseDetail: {
@@ -33,7 +34,35 @@ Page({
       "moniTestNum": 2
     }
   },
-  goToBuy(){
-    console.log('暂时不能购买');
+  goToBuy() {
+    if (app.globalData.userInfo) {
+      wx.showModal({
+        title: '您确定要购买该课程吗？',
+        content: this.data.courseDetail.title,
+        success: (res) => {
+          if(res.confirm){
+            let str = 'courseDetail.myCourse'
+            this.setData({
+              [str]:true
+            })
+          }
+        },
+        fail: (res) => { console.log('不购买') }
+      })
+    } else {
+      wx.showModal({
+        title: '您还未登录，现在去登录？',
+        content: '',
+        cancelText: "再看看",
+        confirmText: "是",
+        success: (res) => {
+          if (res.confirm) {
+            wx.switchTab({
+              url: '../mine/mine',
+            })
+          }
+        }
+      })
+    }
   }
 })

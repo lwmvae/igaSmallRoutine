@@ -135,9 +135,8 @@ Component({
       // console.log(e.currentTarget.id);
       var myEventDetail = {
         id: e.currentTarget.id
-      } // detail对象，提供给事件监听函数
-      var myEventOption = {} // 触发事件的选项
-      this.triggerEvent('toDetail', myEventDetail, myEventOption)
+      } // detail对象，提供给事件监听函数      
+      this.triggerEvent('toDetail', myEventDetail)
     }
   }
 })

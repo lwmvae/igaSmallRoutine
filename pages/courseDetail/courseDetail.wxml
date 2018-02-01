@@ -13,14 +13,15 @@
   </view>
   <view class='chapter-list'>
     <title text="课程章节"></title>
-    <view class='list' wx:for="{{courseDetail.file}}" wx:for-index="idx">
+    <view class='list' wx:for="{{courseDetail.file}}" wx:key="{{index}}" wx:for-index="idx">
       <text class='title'>第{{idx+1}}章  {{item.fileTilte}}</text>
-      <view wx:for="{{item.fileContent}}">
+      <view wx:for="{{item.fileContent}}" wx:key="{{index}}">
         <text class='detail'>{{idx+1}}-{{index+1}} {{item}}</text>
       </view>
     </view>
   </view>
 </view>
 <view class='btn'>
-  <button type='warn' bindtap='goToBuy'>立即购买</button>
+  <button type='warn' bindtap='goToBuy' hidden="{{courseDetail.myCourse}}">立即购买</button>
+  <button type='primary' hidden="{{!courseDetail.myCourse}}">开始学习</button>
 </view>

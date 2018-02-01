@@ -1,2 +1,45 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container">
+  <view class='no-sign' wx:if="{{!sign && userInfo}}">
+    <button bindgetuserinfo='getUserInfo' open-type="getUserInfo">点击登录</button>
+  </view>
+  <view class='sign' wx:else>
+    <view class='head'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+      <view class='edit-info'>
+        <icon type='info' size='15'></icon>
+        <text class='edit'>编辑资料</text>
+      </view>
+    </view>
+    <view class='gray'></view>
+    <view class='content'>
+      <view class='content-wrapper'>
+        <icon type="success" size='30'></icon>
+        <text class='text'>我的课程</text>
+      </view>
+      <view class='content-wrapper'>
+        <icon type="warn" size='30'></icon>
+        <text class='text'>我的试卷</text>
+      </view>
+      <view class='content-wrapper'>
+        <icon type="waiting" size='30'></icon>
+        <text class='text'>我的证书</text>
+      </view>
+      <view class='content-wrapper'>
+        <icon type="cancel" size='30'></icon>
+        <text class='text'>我的收藏</text>
+      </view>
+      <view class='content-wrapper'>
+        <icon type="download" size='30'></icon>
+        <text class='text'>常见问题</text>
+      </view>
+      <view class='content-wrapper'>
+        <icon type="search" size='30'></icon>
+        <text class='text'>常见问题</text>
+      </view>
+      <view class='content-wrapper'>
+        <icon type="clear" size='30'></icon>
+        <text class='text'>设置</text>
+      </view>
+    </view>
+  </view>
+</view>

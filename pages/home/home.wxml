@@ -1,5 +1,5 @@
 <view class="container">
-  <banner></banner>
+  <banner bind:toHot="goToHot"></banner>
   <view class='recommend'>
     <text class='title'>课程推荐</text>
   </view>
